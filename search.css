@@ -22,16 +22,18 @@ header {
     background-color: rgb(220, 20, 47);
     color: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 5rem;
     display: flex;
-    align-items: left;
-    padding: 1.5rem 1rem; 
+    align-items: center;
+    padding: 2rem; 
     width: 100%;
 }
 
 .navbar {
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     width: 100%;
+    text-align: center;
 }
 
 .nav-contact-links {
@@ -48,7 +50,6 @@ header {
     text-decoration: none;
     color: white;
     font-size: 1rem;
-    padding: 0.5rem 1rem;
     transition: color 0.3s;
 }
 
