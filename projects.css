@@ -131,8 +131,8 @@ header {
     color: white;
     padding: 2rem; 
     display: flex;
-    justify-content: left;
-    align-items: left;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 100%;
     text-align: center;
 }
