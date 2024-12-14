@@ -2,28 +2,35 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 body {
     font-family: Arial, sans-serif;
     color: black;
-    margin:0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
     background-color: rgb(220, 20, 47);
     color: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    height: 5rem;
     display: flex;
-    align-items: center;
-    padding: 0 2rem; 
+    align-items: left;
+    padding: 1.5rem 2rem; 
     width: 100%;
 }
 
 .navbar {
     display: flex;
-    justify-content: flex-start;
+    justify-content: left;
     width: 100%;
-    text-align: center;
 }
 
 .nav-contact-links {
@@ -40,6 +47,7 @@ header {
     text-decoration: none;
     color: white;
     font-size: 1rem;
+    padding: 0.5rem 1rem;
     transition: color 0.3s;
 }
 
@@ -48,6 +56,7 @@ header {
 }
 
 .projects-section {
+    flex: 1;
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -81,6 +90,7 @@ header {
     max-width: 300px;
     text-align: left;
     text-decoration: none;
+    background-color: #f9f9f9; 
 }
 
 .project-card img {
@@ -91,7 +101,7 @@ header {
     border-bottom: 4px solid rgb(220, 20, 47);
 }
 
-.project-card .project-info {
+.project-info {
     padding: 1rem;
 }
 
@@ -119,9 +129,10 @@ header {
     color: white;
     padding: 2rem; 
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     width: 100%;
+    text-align: left;
 }
 
 .footer-links {
@@ -150,18 +161,6 @@ header {
     color: #ddd;
 }
 
-@media (max-width: 768px) {
-    .project-card {
-        flex: 1 1 calc(50% - 1rem); 
-    }
-}
-
-@media (max-width: 576px) {
-    .project-card {
-        flex: 1 1 100%; 
-    }
-}
-
 @media (max-width: 899px) {
     .nav-contact-links {
         flex-direction: column; 
@@ -172,6 +171,8 @@ header {
         justify-content: center;
         align-items: center;
         padding: 1rem; 
+        font-size: 1.2rem;
+        text-align: center;
     }
 
     header {
@@ -186,13 +187,24 @@ header {
     }
 
     .footer-container {
-        margin-top: 2rem;
         justify-content: center;
         align-items: center;
         padding: 1rem; 
-    }
+    }  
 
     .nav-contact-links a {
-        font-size: larger; 
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        flex: 1 1 calc(50% - 1rem); 
+    }
+}
+
+@media (max-width: 576px) {
+    .project-card {
+        flex: 1 1 100%; 
     }
 }

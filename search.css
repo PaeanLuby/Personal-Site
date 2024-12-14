@@ -2,29 +2,36 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
     background-color: rgb(220, 20, 47);
     color: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    height: 5rem;
     display: flex;
-    align-items: center;
-    padding: 0 2rem; 
+    align-items: left;
+    padding: 1.5rem 1rem; 
     width: 100%;
 }
 
 .navbar {
     display: flex;
-    justify-content: flex-start;
+    justify-content: left;
     width: 100%;
-    text-align: center;
 }
 
 .nav-contact-links {
@@ -41,6 +48,7 @@ header {
     text-decoration: none;
     color: white;
     font-size: 1rem;
+    padding: 0.5rem 1rem;
     transition: color 0.3s;
 }
 
@@ -48,11 +56,12 @@ header {
     color: #ddd;
 }
 
-
 .project-details {
+    flex: 1;
     max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
     text-align: left;
-    justify-self: center;
 }
 
 .project-details h1 {
@@ -66,6 +75,7 @@ header {
 .media-container img {
     width: 100%;
     max-width: 500px;
+    height: auto;
     display: block;
     margin: 1rem auto;
 }
@@ -101,6 +111,7 @@ header {
     margin-top: 0.5rem;
     margin-bottom: 2rem;
     transition: background-color 0.3s ease;
+    justify-content: center;
 }
 
 .btn:hover {
@@ -112,9 +123,10 @@ header {
     color: white;
     padding: 2rem; 
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     width: 100%;
+    text-align: left;
 }
 
 .footer-links {
@@ -145,11 +157,13 @@ header {
 
 @media (max-width: 899px) {
     .project-details {
-        margin:10%;
+        margin: 5%;
+        padding: 0;
     }
 
     .btn {
         display: flex;
+        justify-content: center;
     }
 
     .nav-contact-links {
@@ -161,12 +175,12 @@ header {
         justify-content: center;
         align-items: center;
         padding: 1rem; 
-        font-size: large;
+        font-size: 1.2rem;
         text-align: center;
     }
 
     header {
-        padding: 1rem; 
+        padding: 1.5rem; 
         width: 100%;
     }
 
@@ -183,8 +197,6 @@ header {
     }  
 
     .nav-contact-links a {
-        font-size: larger; 
+        font-size: 1.2rem;
     }
 }
-
-
