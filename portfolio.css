@@ -108,13 +108,10 @@ header {
     background-color: #000;
 }
 
-.logo1:hover {
-    color: #000;
-}
-
 .bottom-container {
     display: flex;
     gap: 1rem;
+    justify-content: flex-end;
 }
 
 .footer-container {
